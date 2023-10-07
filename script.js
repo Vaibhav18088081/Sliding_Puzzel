@@ -2,7 +2,11 @@ var MovesCount=0
 function randomPos(){
     var arr = [];
 
-
+    while(arr.length < 9){
+        var r = ((Math.floor(Math.random() * 3)+1).toString())+((Math.floor(Math.random() * 3)+1).toString());
+        if(arr.indexOf(r) === -1) arr.push(r);
+    }
+    return arr
     
 }
 
